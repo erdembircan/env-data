@@ -1,4 +1,4 @@
-# env-data [![Build Status](https://travis-ci.org/erdembircan/selection-popup.svg?branch=master)](https://travis-ci.org/erdembircan/selection-popup)
+# env-data [![Build Status](https://travis-ci.org/erdembircan/env-data.svg?branch=master)](https://travis-ci.org/erdembircan/env-data)
 
 ---
 
