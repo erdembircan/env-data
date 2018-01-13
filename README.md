@@ -2,49 +2,79 @@
 
 ---
 
-A library to add popup menus at text selections.
-<br>
-[Demo page](https://erdembircan.github.io/selection-popup/)
+A library to add and select key value pairs for different NODE_ENV values .
 
 ---
 
 ## Installation
-`npm install selection-popup`
+
+`npm install env-data --save`
 
 ---
 
 ## Usage
-```
-const selectionPop = require('selection-popup)
 
-selectionPop(['share', '<i class="fa fa-twitter" aria-hidden="true"></i>
-', 'log'], [shareFunc, tweetFunc, function(e){
-  console.log('selected item: ' + e)
-} ],{style: 'background-color:yellow'});
+contents of index.js
+
+```
+const envData = require('envData');
+
+envData.setParameters({
+      test: { port: 3000,secret: 'testSecret },
+      development: {port: 4000, secret: 'superSecret'}
+      production: path.resolve(__dirname, './prodData.js'),
+      defaultEnv: 'test',
+    });
+```
+
+contents of prodData.js
+
+```
+module.exports = {port: 8000, secret: 'prodSecret'}
+```
+
+contents of someJsOtherThanIndex.js
+
+```
+const envData = require('envData');
+
+envData.getData('secret');
 ```
 
 ---
 
 ## API
-### selectionPop([items],[funcs] ,[options])
-add a popup menu to document
 
-### items (required)
-Type: `array`, `String`(for single item)
+### setParameters(params)
 
----
-### funcs (required)
-Type: `array`, `String`(for single item)
-functions for onClick actions of the appropriate items
+set parameters for key value pairs of NODE_ENV props
 
----
+#### params
 
-### options (optional)
 Type: `object`
-<br>
-[style]: `String` an override styles for customization
+
+#### params.defaultEnv
+
+Type: `string`
+
+Default: `development`
+
+override default env value
+
+<br/>
+
+### getData (key)
+
+get value of the given key
+
+#### key
+
+Type: `string`
+
+key for value
 
 ---
 
 ## License
-Copyright © 2017, Erdem Bircan. Released under the MIT License.
+
+Copyright © 2018, Erdem Bircan. Released under the MIT License.
