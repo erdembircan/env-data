@@ -4,18 +4,18 @@
   "description": "data selector for different NODE_ENV environment values",
   "main": "index.js",
   "scripts": {
+    "devTest": "jest --verbose --watch",
     "test": "jest"
+  },
+  "jest": {
+    "bail": false,
+    "testRegex": ".*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/erdembircan/env-data.git"
   },
-  "keywords": [
-    "env",
-    "data",
-    "config",
-    "npm"
-  ],
+  "keywords": ["env", "data", "config", "npm"],
   "author": "Erdem Bircan <erdem.erdembircan@gmail.com> (https://erdembircan.github.io/)",
   "license": "MIT",
   "bugs": {
