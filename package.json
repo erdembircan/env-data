@@ -1,6 +1,6 @@
 {
   "name": "env-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "data selector for different NODE_ENV environment values",
   "main": "index.js",
   "scripts": {

@@ -32,7 +32,7 @@ class EnvData {
    * @returns {*} data - data
    */
   getData(key) {
-    const currentEnv = process.env.NODE_ENV || this._data.default;
+    const currentEnv = process.env.NODE_ENV || this._data.defaultEnv;
     return this._data[currentEnv][key];
   }
 }
